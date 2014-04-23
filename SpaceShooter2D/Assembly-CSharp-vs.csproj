@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9D712C1D-16EB-0323-A44B-9885328BC478}</ProjectGuid>
+	<ProjectGuid>{F9FAFB9F-1126-2012-06AC-827B93BBF6FF}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -390,6 +390,8 @@
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByProperties.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByTags.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\StoreOrganizer.cs" />
+     <Compile Include="Assets\myScripts\GetMenu.cs" />
+     <Compile Include="Assets\myScripts\QuitGame.cs" />
      <Compile Include="Assets\myScripts\StartGame.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.7.txt" />
