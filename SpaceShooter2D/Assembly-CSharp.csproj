@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{9D712C1D-16EB-0323-A44B-9885328BC478}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Done\Done_Scripts\Done_BGScroller.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByBoundary.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByContact.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByTime.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_EvasiveManeuver.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_GameController.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_Mover.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_PlayerController.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_RandomRotator.cs" />
+     <Compile Include="Assets\Done\Done_Scripts\Done_WeaponController.cs" />
+     <Compile Include="Assets\Facebook\Examples\Scripts\InteractiveConsole.cs" />
+     <Compile Include="Assets\Facebook\Scripts\AndroidFacebook.cs" />
+     <Compile Include="Assets\Facebook\Scripts\AndroidFacebookLoader.cs" />
+     <Compile Include="Assets\Facebook\Scripts\CanvasFacebookLoader.cs" />
+     <Compile Include="Assets\Facebook\Scripts\EditorFacebook.cs" />
+     <Compile Include="Assets\Facebook\Scripts\EditorFacebookAccessToken.cs" />
+     <Compile Include="Assets\Facebook\Scripts\EditorFacebookLoader.cs" />
+     <Compile Include="Assets\Facebook\Scripts\FB.cs" />
+     <Compile Include="Assets\Facebook\Scripts\FBScreen.cs" />
+     <Compile Include="Assets\Facebook\Scripts\FBSettings.cs" />
+     <Compile Include="Assets\Facebook\Scripts\IOSFacebook.cs" />
+     <Compile Include="Assets\Facebook\Scripts\IOSFacebookLoader.cs" />
+     <Compile Include="Assets\Facebook\Scripts\NativeDialogModes.cs" />
+     <Compile Include="Assets\Facebook\TestPlatformLogin.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIEquipmentSlot.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIItemSlot.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIItemStorage.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIStorageSlot.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvAttachmentPoint.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvBaseItem.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvDatabase.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvEquipment.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvGameItem.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvStat.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\ChatInput.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\DownloadTexture.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\EnvelopContent.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\ExampleDragDropItem.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\ExampleDragDropSurface.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\LagPosition.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\LagRotation.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\LoadLevelOnClick.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\LookAtTarget.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\OpenURLOnClick.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\PanWithMouse.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\PlayIdleAnimations.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\SetColorOnSelection.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\ShaderQuality.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\Spin.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\SpinWithMouse.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\Tutorial5.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\TypewriterEffect.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\UISliderColors.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\WindowAutoYaw.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\Other\WindowDragTilt.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\LanguageSelection.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButton.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonActivate.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonColor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonKeys.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonMessage.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonOffset.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonRotation.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonScale.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UICenterOnChild.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UICenterOnClick.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragCamera.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragDropContainer.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragDropItem.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragDropRoot.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragObject.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragResize.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragScrollView.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIDraggableCamera.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIEventTrigger.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIForwardEvents.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIGrid.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIImageButton.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIKeyBinding.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIKeyNavigation.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIPlayAnimation.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIPlaySound.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIPlayTween.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIPopupList.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIProgressBar.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UISavedOption.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIScrollBar.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIScrollView.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UISlider.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UISoundVolume.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UITable.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIToggle.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIToggledComponents.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIToggledObjects.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIWidgetContainer.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Interaction\UIWrapContent.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\ActiveAnimation.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\AnimationOrTween.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\BMFont.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\BMGlyph.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\BMSymbol.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\BetterList.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\ByteReader.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\EventDelegate.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\Localization.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\NGUIDebug.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\NGUIMath.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\NGUIText.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\NGUITools.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\PropertyBinding.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\PropertyReference.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\RealTime.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\SpringPanel.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\UIDrawCall.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\UIEventListener.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\UIGeometry.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\UIRect.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Internal\UIWidget.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\AnimatedAlpha.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\AnimatedColor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\SpringPosition.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenAlpha.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenColor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenFOV.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenHeight.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenOrthoSize.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenPosition.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenRotation.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenScale.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenTransform.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenVolume.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\TweenWidth.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Tweening\UITweener.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UI2DSprite.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UI2DSpriteAnimation.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIAnchor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIAtlas.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UICamera.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIFont.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIInput.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UILabel.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UILocalize.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIOrthoCamera.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIPanel.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIRoot.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UISprite.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UISpriteAnimation.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UISpriteData.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIStretch.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UITextList.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
+     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\SocialPlay- Mobile\FaceBookMobileAuthentication.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Abstract\ItemContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Abstract\ItemDataConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\BundleSystemInitilizer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Bundles\AssetBundleGetter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Bundles\AssetBundleTracker.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Bundles\BundlePacket.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Bundles\BundleSystem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Bundles\bundleInitializer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ChestItemContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ContainerAddState.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ContainerItemComponentInitializer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ContainerItemLoader.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ContainerRefresh.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\GameObjectItemDataConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Interfaces\IItemStatsConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Interfaces\IItemsService.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\Interfaces\ISlotSelector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemComponentInitalizer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemComponentSetup.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemContainerManager.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemContainerRestrictor.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemContainerStackRestrictions.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemContainerStackRestrictor.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemConversion.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemData.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemDataLoader.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemOwnerTypes.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemServiceManager.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemStackRestrictionHandler.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemStatsConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\ItemSystemGameData.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\LimitedItemContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\LimitlessItemContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\LoadItemsForContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\LoadItemsForSlottedContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\OldItemStatsConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\PrioritySelector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\SaveSlotsToLocation.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\SaveToLocation.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\SlottedContainerSlotData.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\SlottedItemContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\SocialplayItemStatsConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\UnityGameDataInjector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\ItemSystems\WebItemService.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Prefab\Resources\Atlases\AtlasSwapData.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\CallBackBrowserHook.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\GridLoader\IGridLoader.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\GridLoader\NGUIGridLoader.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\Interfaces\IGameResumer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\ProfilePic.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\SPHelper.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\StatsTracker\KongregateStatsTracker.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\StatsTracker\StatsTracker.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\Systems\Generic\UIResolutionScale.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\SPGenericLibrary\WebServiceUrlSwitcher.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\ClassModels\SocialPlayUser.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\AutoFlyIn.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerActionLink.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerActions.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerDropAllContainerItemsAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerDropItemAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerItemComponentUseAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerMoveAllItemsAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerMoveItemAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerRemoveAllItemAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ContainerRemoveItemAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ItemFilters\BehaviourItemFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ItemFilters\ClassIDItemFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ItemFilters\ContainerItemFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ItemFilters\ItemIDItemFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ItemFilters\TagItemFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ItemFilters\varianceIDItemFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerAmountLabelDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerDispalyDeactivateGameObject.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerDisplayAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ContainerKeybinding.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\DependentContainers.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\EnviromentContainerLoader.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\EquipModelDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\ItemContainerOnLoadInserter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\NGUIItemStackRestrictionHandler.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\NGUIItemSystemSetup.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\NGUILimitedGridItemContainerDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\NGUILimitlessGridItemContainerDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\NGUISlottedItemContainerDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\NGUISlottedItemContainerStatusDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\NGUITooltip.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\PrioritySlotSortingInjector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\SlotData.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\SlotItemfilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\SlotKeybinding.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\SlottedItemContainerOnLoadInserter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\TrashCanContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Containers\TrashCanDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ConfigurableNGUIItemTooltip.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\GameItemContainerInserter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\GameObjectInitilizer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\IGameObjectAction.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\IItemPutter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemComponents\ClubItemComponent.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemComponents\IItemComponent.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemComponents\MusketItemComponent.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemComponents\SpearItemComponent.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemDrop.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemGetter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemPrefabInitilizer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemPutterDropper.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemQuailityColorSelector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemQualityDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\ItemTooltipSetup.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\NGUIContainerGameItem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\NGUIDragDropItem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\Selectors\BehaviourItemSelector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\Selectors\ClassIDItemSelector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\Selectors\ItemDataSelector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\Selectors\ItemFilterSystem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\Selectors\TagItemSelector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\StandardGameObjectInitilizer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\LoginItemContainer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\LoginWelcomeMessage.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\CloudGoodsSetup.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\GameAuthentication.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\ITooltipSetup.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\ItemTextureCache.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\NGUILayerMatch.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\NGUI_SPLogin.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\PlainTextTooltip.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\SPLogin.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\SPLogout.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\SocialPlayInEditorLoginSystem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\SocialPlayUserAuth.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\Systems.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\WebPlatformLogin.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Utility\DontDestroyOnLoad.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Utility\GlobalPrefabInitilizer.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Utility\UIInputEmailValidation.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Utility\UIInputLengthValidation.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Utility\UIInputPasswordValidation.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Utility\UIInputVisualValidation.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Utility\UserNameLabel.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Web\EditorWWWPacket.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Web\IServiceCalls.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Web\MockWebItemService.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Web\WebItemServiceInjector.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Web\WebPlatformLink.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Scripts\Web\WebserviceCalls.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\FaceBookPurchaser.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\PurchaseBundles\CreditBundleStore.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\PurchaseBundles\NGUIBundleItem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\PurchaseResponseHandler.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\CloseCreditsPurchase.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\CreditBundleIcon.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\CurrencyConverter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\DisplayCreditsPurchase.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\GUIStorePlatform.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\GenericSocialPlayPurchase.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\Interfaces\IBundlePurchaser.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\Interfaces\IPlatformPurchaser.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\KongregatePurchase.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\CreditPurchase\Scripts\LoadPlatformSetup.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\CurrencyBalance.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\DisplayItems.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\DisplayNewestItems.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\FilterNewestItems.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\HomeStore.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\ItemInfo.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\ItemPurchase.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\NGUIStore.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\NGUIStoreLoader.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\PageInfo.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\PropertiesFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\PurchaseButtonDisplay.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\PurchaseCredits.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\SearchNameFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\SortStoreItemsBy.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\Sortables\ISortItem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\Sortables\SortByProperty.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\SortingStoreItems.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\StoreItemFilter.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\StoreItemTooltipSetup.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\StorePanel.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItem.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByProperties.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByTags.cs" />
+     <Compile Include="Assets\SocialPlay-SDK\Store\StoreOrganizer.cs" />
+     <Compile Include="Assets\myScripts\StartGame.cs" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
+     <None Include="Assets\NGUI\ReadMe - 3.5.7.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
+     <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
+     <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 1.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 2.shader" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Masked Colored.shader" />
+     <None Include="Assets\SocialPlay-SDK\Store\Atlas\Fonts\raw\bold22.txt" />
+     <None Include="Assets\SocialPlay-SDK\Font Resource\Arial 16.fnt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
+     <None Include="Assets\SocialPlay-SDK\Store\Atlas\Fonts\raw\medieval22.txt" />
+     <None Include="Assets\SocialPlay-SDK\Font Resource\Franklin 22.fnt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
+     <None Include="Assets\SocialPlay-SDK\Font Resource\Arial 22.fnt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\SocialPlay-SDK\Store\Atlas\Fonts\raw\bold16.txt" />
+     <None Include="Assets\SocialPlay-SDK\Font Resource\Arial 18.fnt" />
+     <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
+     <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
+     <None Include="Assets\SocialPlay-SDK\Font Resource\Arial 26.fnt" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
+     <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
+     <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
+     <None Include="Assets\SocialPlay-SDK\Store\Atlas\Fonts\raw\medieval18.txt" />
+ <Reference Include="IFacebook">
+ <HintPath>Assets\Facebook\Scripts\IFacebook.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>Assets\SocialPlay-SDK\DLLS\LitJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>Assets\SocialPlay-SDK\DLLS\Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="protobuf-net">
+ <HintPath>Assets\SocialPlay-SDK\DLLS\protobuf-net.dll</HintPath>
+ </Reference>
+ <Reference Include="SocialPlay.Data">
+ <HintPath>Assets\SocialPlay-SDK\DLLS\SocialPlay.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="SocialPlay.Generic">
+ <HintPath>Assets\SocialPlay-SDK\DLLS\SocialPlay.Generic.dll</HintPath>
+ </Reference>
+ <Reference Include="SocialPlay.Service">
+ <HintPath>Assets\SocialPlay-SDK\DLLS\SocialPlay.Service.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
