@@ -10,7 +10,6 @@ public class LoginWelcomeMessage : MonoBehaviour {
 		SPLogin.recivedUserInfo += SPLogin_recivedUserInfo;
 		GameAuthentication.OnUserAuthEvent += GameAuthentication_OnUserAuthEvent;
 	}
-	
 
 	void GameAuthentication_OnUserAuthEvent(string obj) 
 	{
@@ -21,5 +20,13 @@ public class LoginWelcomeMessage : MonoBehaviour {
 	{
 		welcomeMessage.gameObject.SetActive(true);
 		welcomeMessage.text = "Welcome " + obj.name + " ";
+
+		StartCoroutine(MyMethod());
+	}
+
+	IEnumerator MyMethod() 
+	{
+		yield return new WaitForSeconds(3);
+		Application.LoadLevel("mainMenu");
 	}
 }

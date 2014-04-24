@@ -390,7 +390,7 @@
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByProperties.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByTags.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\StoreOrganizer.cs" />
-     <Compile Include="Assets\myScripts\GetMenu.cs" />
+     <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\myScripts\QuitGame.cs" />
      <Compile Include="Assets\myScripts\StartGame.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
