@@ -13,15 +13,6 @@ public class ItemDrop : MonoBehaviour
     {
         if (item != null)
         {
-           
-            //List<ItemData> items = new List<ItemData>();
-            //items.Add(item);
-            //List<GameObject> dropItems = ItemConverter.ConvertToItemDropObject(items, true);
-
-            //foreach (GameObject dropItem in dropItems)
-            //  {
-
-
             item.AssetBundle(
                 (UnityEngine.Object bundleObj) =>
                 {
@@ -46,8 +37,6 @@ public class ItemDrop : MonoBehaviour
                         postDropObjectAction.DoGameObjectAction(dropObject);
                 }
             );
-            //  }
-
         }
     }
 }

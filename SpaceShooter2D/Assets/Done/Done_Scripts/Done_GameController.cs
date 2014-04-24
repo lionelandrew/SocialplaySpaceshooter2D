@@ -35,7 +35,7 @@ public class Done_GameController : MonoBehaviour
 		{
 			if (Input.GetKeyDown (KeyCode.R))
 			{
-				Application.LoadLevel (Application.loadedLevel);
+                Application.LoadLevel("mainMenu"); 
 			}
 		}
 	}
@@ -57,7 +57,7 @@ public class Done_GameController : MonoBehaviour
 			
 			if (gameOver)
 			{
-				restartText.text = "Press 'R' for Restart";
+				restartText.text = "Press 'R' for MainMenu";
 				restart = true;
 				break;
 			}

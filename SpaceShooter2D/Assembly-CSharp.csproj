@@ -390,8 +390,13 @@
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByProperties.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByTags.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\StoreOrganizer.cs" />
+     <Compile Include="Assets\myScripts\DestroyEnemies.cs" />
+     <Compile Include="Assets\myScripts\DestroyParticles.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
+     <Compile Include="Assets\myScripts\PlayerPickup.cs" />
      <Compile Include="Assets\myScripts\QuitGame.cs" />
+     <Compile Include="Assets\myScripts\RotateParticle.cs" />
+     <Compile Include="Assets\myScripts\SpawnParticleEffect.cs" />
      <Compile Include="Assets\myScripts\StartGame.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.7.txt" />

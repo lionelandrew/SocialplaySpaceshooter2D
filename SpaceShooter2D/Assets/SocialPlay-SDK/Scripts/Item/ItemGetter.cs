@@ -62,7 +62,7 @@ public class ItemGetter : MonoBehaviour
 
     void OnReceivedGeneratedItems(string generatedItemsJson)
     {
-        ReattachToGameObject();
+        //ReattachToGameObject();
         List<ItemData> items = ItemConversion.converter.convertToItemDataFromString(generatedItemsJson);
         itemPutter.PutGameItem(items);
     }
