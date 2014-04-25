@@ -394,6 +394,7 @@
      <Compile Include="Assets\myScripts\DestroyParticles.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\myScripts\PlayerPickup.cs" />
+     <Compile Include="Assets\myScripts\PressMain.cs" />
      <Compile Include="Assets\myScripts\QuitGame.cs" />
      <Compile Include="Assets\myScripts\RotateParticle.cs" />
      <Compile Include="Assets\myScripts\SpawnParticleEffect.cs" />
