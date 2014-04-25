@@ -19,14 +19,12 @@ public class SlotData : MonoBehaviour
     /// </summary>
     public int slotID;
 
-
     /// <summary>
     /// The location to save this slot to. if -1 no persistancy will be applied to this slot.
     /// </summary>
     public int persistantLocationID =-1;
 
     internal List<ItemFilterSystem> filters = new List<ItemFilterSystem>();
-
 
     /// <summary>
     /// Gets all attached slot filters.

@@ -5,11 +5,8 @@ using Newtonsoft.Json.Linq;
 
 public class SaveToLocation : MonoBehaviour
 {
-
     public ItemOwnerTypes DestinationOwnerType;
-
     public ItemContainer Container = null;
-
     public int DestinationLocation;
 
     void OnEnable()
@@ -37,6 +34,7 @@ public class SaveToLocation : MonoBehaviour
         if (isSave == true)
         {
             data.isLocked = true;
+
             WebserviceCalls.webservice.MoveItemStack(data.stackID, data.stackSize, GetOwnerID(), DestinationOwnerType.ToString(), ItemSystemGameData.AppID, DestinationLocation, delegate(string x)
             {
                 Debug.Log("Mod: " + x + "\nOriginal: " + data.stackID.ToString());
@@ -52,6 +50,7 @@ public class SaveToLocation : MonoBehaviour
         if (isSave == true)
         {
             data.isLocked = true;
+
             WebserviceCalls.webservice.MoveItemStack(data.stackID, data.stackSize, GetOwnerID(), DestinationOwnerType.ToString(), ItemSystemGameData.AppID, DestinationLocation, delegate(string x)
             {
                 Debug.Log("Added: " + x + "\nOriginal: " + data.stackID.ToString());
@@ -79,15 +78,14 @@ public class SaveToLocation : MonoBehaviour
         {
             case ItemOwnerTypes.Instance:
                 return ItemSystemGameData.InstanceID.ToString();
+
             case ItemOwnerTypes.Session:
                 return ItemSystemGameData.SessionID.ToString();
+
             case ItemOwnerTypes.User:
                 return ItemSystemGameData.UserID.ToString();
         }
         return "";
     }
-
-
-
 }
 

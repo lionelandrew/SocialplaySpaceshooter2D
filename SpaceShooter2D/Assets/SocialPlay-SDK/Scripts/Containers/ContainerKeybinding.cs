@@ -27,22 +27,22 @@ public class ContainerKeybinding : MonoBehaviour
 
     void Update()
     {
-  
         if (!isDisabaled && Input.GetKeyDown(binding))
         {
             switch (actiontype)
             {
                 case ActionType.toggle:
-
                     containerDisplay.SetWindowIsActive(!containerDisplay.IsWindowActive());
-
                     break;
+
                 case ActionType.open:
                     containerDisplay.SetWindowIsActive(true);
                     break;
+
                 case ActionType.close:
                     containerDisplay.SetWindowIsActive(false);
                     break;
+
                 default:
                     break;
             }

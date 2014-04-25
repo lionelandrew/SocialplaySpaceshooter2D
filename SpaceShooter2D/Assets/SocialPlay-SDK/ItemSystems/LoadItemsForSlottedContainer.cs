@@ -3,7 +3,6 @@ using System.Collections;
 
 public class LoadItemsForSlottedContainer : ContainerItemLoader
 {
-
     public override void LoadItems()
     {
         if (Container == null || Container.GetType() != typeof(SlottedItemContainer))
@@ -15,6 +14,5 @@ public class LoadItemsForSlottedContainer : ContainerItemLoader
         {
             WebserviceCalls.webservice.GetOwnerItems(GetOwnerID(), SourceOwnerType.ToString(), slot.persistantID, ItemSystemGameData.AppID, RecivedItems);
         }
-     
     }
 }
