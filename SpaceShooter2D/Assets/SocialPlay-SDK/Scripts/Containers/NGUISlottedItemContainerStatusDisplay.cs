@@ -15,7 +15,6 @@ public class NGUISlottedItemContainerStatusDisplay : MonoBehaviour
     public SlottedItemContainer container;
     public List<StatsPairs> statsDisplays = new List<StatsPairs>();
 
-
     void OnEnable()
     {
         container.AddedItem += AddItem;
@@ -33,7 +32,6 @@ public class NGUISlottedItemContainerStatusDisplay : MonoBehaviour
         SetStats();
     }
 
-
     void AddItem(ItemData data, bool isSave)
     {    
         SetStats();
@@ -45,7 +43,9 @@ public class NGUISlottedItemContainerStatusDisplay : MonoBehaviour
         {
             if (string.IsNullOrEmpty(sta.statName) || sta.label == null)
                 continue;
+
             sta.label.text = sta.statName + ": ";
+
             if (container.stats.ContainsKey(sta.statName))
             {
                 sta.label.text += container.stats[sta.statName].ToString();
@@ -61,5 +61,4 @@ public class NGUISlottedItemContainerStatusDisplay : MonoBehaviour
     {      
         SetStats();
     }      
-
 }

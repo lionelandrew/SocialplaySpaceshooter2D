@@ -4,7 +4,6 @@ using SocialPlay.ItemSystems;
 
 public class NGUILimitlessGridItemContainerDisplay :  ContainerDisplay
 {
-
     internal UIGrid viewArea;
 
     protected override void SetupWindow()
@@ -17,7 +16,9 @@ public class NGUILimitlessGridItemContainerDisplay :  ContainerDisplay
     {       
         itemData.transform.parent = viewArea.transform;
         itemData.transform.localPosition = new Vector3(0, 0, -1);
-        itemData.transform.localScale = Vector3.one;       
+        itemData.transform.localScale = Vector3.one;
+        viewArea.repositionNow = true;
+
         foreach (UIWidget item in itemData.GetComponentsInChildren<UIWidget>())
         {
             item.enabled = true;
@@ -29,19 +30,16 @@ public class NGUILimitlessGridItemContainerDisplay :  ContainerDisplay
                 item.enabled = true;
             }
         }
-        viewArea.repositionNow = true;
     }
 
     public override void RemoveDisplayItem(ItemData itemData)
     {
         Destroy(itemData.gameObject);
+        Invoke("RepositionGrid", 0.2f);
+    }
+
+    void RepositionGrid()
+    {
         viewArea.repositionNow = true;
     }
-
-    public void PublicSetupWindow()
-    {
-        SetupWindow();
-    }
-
-
 }

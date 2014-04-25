@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 using SocialPlay.ItemSystems;
 using SocialPlay.Data;
 using System.Collections.Generic;
@@ -48,7 +49,8 @@ public class DestroyEnemies : MonoBehaviour
 		}
         else if (other.tag == "Shot" && GameObject.FindGameObjectWithTag("Asteriods"))
         {
-            number = Random.Range(1, 6);
+            number = UnityEngine.Random.Range(1, 6);
+
             if (number == 3)
             {
                 Death();

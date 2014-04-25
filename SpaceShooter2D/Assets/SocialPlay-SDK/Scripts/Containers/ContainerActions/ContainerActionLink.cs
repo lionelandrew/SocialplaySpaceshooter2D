@@ -5,16 +5,11 @@ using SocialPlay.ItemSystems;
 
 public class ContainerActionLink : MonoBehaviour
 {
-
     //public List<int> ClassIDList;
     //public List<string> TagList;
     public List<ContainerItemFilter> filters = new List<ContainerItemFilter>();
-
-
     public InputTypes ContainerActionInput;
-
     public ContainerActions containerAction;
-
     ItemContainer container;
 
     void Start()
@@ -30,12 +25,15 @@ public class ContainerActionLink : MonoBehaviour
             case InputTypes.click:
                 container.ItemSingleClicked += PerformActionWithItem;
                 break;
+
             case InputTypes.doubleClick:
                 container.ItemDoubleClicked += PerformActionWithItem;
                 break;
+
             case InputTypes.rightClick:
                 container.ItemRightClicked += PerformActionWithItem;
                 break;
+
             case InputTypes.keyBindingPressed:
                 container.ItemKeyBindingClicked += PerformActionWithItem;
                 break;
@@ -53,6 +51,7 @@ public class ContainerActionLink : MonoBehaviour
                 break;
             }
         }
+
         if (!isfilteredOut)
             containerAction.DoAction(itemData);
 

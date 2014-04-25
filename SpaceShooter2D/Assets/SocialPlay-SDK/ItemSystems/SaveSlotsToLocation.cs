@@ -5,9 +5,7 @@ using Newtonsoft.Json.Linq;
 
 public class SaveSlotsToLocation : MonoBehaviour
 {
-
     public ItemOwnerTypes DestinationOwnerType;
-
     public SlottedItemContainer SlotedContainer = null;
 
     void OnEnable()
@@ -28,15 +26,16 @@ public class SaveSlotsToLocation : MonoBehaviour
         }
     }
 
-
     void AddedItem(ItemData data, bool isSave)
     {
         int slotId = SlotedContainer.FindItemInSlot(data);
+
         if (slotId != -1)
         {
             if (isSave == true && SlotedContainer.slots[slotId].persistantID != -1)
             {
                 data.isLocked = true;
+
                 WebserviceCalls.webservice.MoveItemStack(data.stackID, data.stackSize, GetOwnerID(), DestinationOwnerType.ToString(), ItemSystemGameData.AppID, SlotedContainer.slots[slotId].persistantID, delegate(string x)
                 {
                     try
@@ -45,6 +44,7 @@ public class SaveSlotsToLocation : MonoBehaviour
                         JToken token = JToken.Parse(x);
                         data.stackID = new Guid(token.ToString());
                     }
+
                     finally
                     {
                         data.isLocked = false;
@@ -80,11 +80,14 @@ public class SaveSlotsToLocation : MonoBehaviour
         {
             case ItemOwnerTypes.Instance:
                 return ItemSystemGameData.InstanceID.ToString();
+
             case ItemOwnerTypes.Session:
                 return ItemSystemGameData.SessionID.ToString();
+
             case ItemOwnerTypes.User:
                 return ItemSystemGameData.UserID.ToString();
         }
+
         return "";
     }
 }

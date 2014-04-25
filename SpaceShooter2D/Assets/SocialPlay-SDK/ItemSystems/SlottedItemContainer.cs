@@ -10,11 +10,8 @@ public class SlottedItemContainer : ItemContainer
     public bool isSwappable;
 
     internal static ISlotSelector slotSelector = new PrioritySelector();
-
     internal Dictionary<int, SlottedContainerSlotData> slots = new Dictionary<int, SlottedContainerSlotData>();
-
     internal Dictionary<string, float> stats = new Dictionary<string, float>();
-
 
     public void AddSlot(int slotID, ItemData slotData, List<ItemFilterSystem> filters, int persistantID = -1, int slotMaxCount = 1, int priority = 0)
     {
@@ -43,6 +40,7 @@ public class SlottedItemContainer : ItemContainer
         {
             return -1;
         }
+
         foreach (KeyValuePair<int, SlottedContainerSlotData> pair in slots)
         {
             if (pair.Value.slotData == null)
@@ -85,11 +83,11 @@ public class SlottedItemContainer : ItemContainer
 
     public void AddToSlot(ItemData modified, int slotID, int amount = -1, bool isSave = true)
     {
-
         SlottedContainerSlotData selectedSlot = slots[slotID];
         ItemData NewSlotData = null;
 
         int TargetStackSize = amount;
+
         if (amount == -1)
             TargetStackSize = modified.stackSize;
 
@@ -139,13 +137,14 @@ public class SlottedItemContainer : ItemContainer
                 return true;
             }
         }
+
         return false;
     }
 
     protected void ModdifyStatsByFactor(ItemData data, int factor)
     {
-
         if (data.stats == null) return;
+
         foreach (KeyValuePair<string, float> StatsDataPair in data.stats)
         {
             string tmp = StatsDataPair.Key;
@@ -159,6 +158,7 @@ public class SlottedItemContainer : ItemContainer
                 stats.Add(StatsDataPair.Key, StatsDataPair.Value * factor);
                 tmp += "Adding new Key with :" + StatsDataPair.Value * factor;
             }
+
             tmp += "\n final value :=" + stats[StatsDataPair.Key];
         }
     }
@@ -183,11 +183,13 @@ public class SlottedItemContainer : ItemContainer
                     containerItems.Remove(selectedSlot.Value.slotData);
 
                     RemovedAmount = amount;
+
                     if (!isMovingToAnotherContainer)
                     {
                         selectedSlot.Value.slotData.stackSize -= amount;
                         RemovedAmount = amount;
                     }
+
                     selectedSlot.Value.slotData = null;
                 }
                 else
@@ -209,6 +211,7 @@ public class SlottedItemContainer : ItemContainer
         foreach (KeyValuePair<int, SlottedContainerSlotData> selectedSlot in slots)
         {
             if (selectedSlot.Value.slotData == null) continue;
+
             if (selectedSlot.Value.slotData.IsSameItemAs(itemData))
             {
                 return selectedSlot.Value.slotData.stackSize;
@@ -230,17 +233,16 @@ public class SlottedItemContainer : ItemContainer
 
     protected override ContainerAddState MyContainerAddState(ItemData modified)
     {
-
         Dictionary<int, SlottedContainerSlotData> tmp = GetAllAvalibleSlots(modified);
-
-
         List<SlottedContainerSlotData> ShortList = tmp.Values.ToList<SlottedContainerSlotData>();
         ContainerAddState state = new ContainerAddState(ContainerAddState.ActionState.No);
         ShortList.Sort((a, b) => a.priority.CompareTo(b.priority));
+
         if (tmp.Count != 0)
         {
             bool Swaping = false;
             SlottedContainerSlotData firstStack = null;
+
             foreach (SlottedContainerSlotData SelectedSlots in tmp.Values)//Check for empty slots
             {
                 if (SelectedSlots.slotData == null)
@@ -255,14 +257,15 @@ public class SlottedItemContainer : ItemContainer
                 }
                 else
                 {
-
                     Swaping = true;
+
                     if (firstStack == null)
                     {
                         firstStack = SelectedSlots;
                     }
                 }
             }
+
             if (Swaping && firstStack != null)
             {
                 if (isSwappable)

@@ -20,8 +20,6 @@ public class LimitedItemContainer : ItemContainer
 
     protected override ContainerAddState MyContainerAddState(ItemData modified)
     {
-
-       
         ContainerAddState currentAddableState = new ContainerAddState(ContainerAddState.ActionState.No, 0);
 
         if (containerItems.Count == containerMaxSize && !containerItems.Contains(modified))
@@ -29,10 +27,8 @@ public class LimitedItemContainer : ItemContainer
             return currentAddableState; //No room for this item.
         }
 
-
         //TODO max stack size to be properly retreived
         int maxStackSizePerSlot = -1;
-
 
         if (maxStackSizePerSlot == -1)
         {
@@ -99,7 +95,9 @@ public class LimitedItemContainer : ItemContainer
                     Destroy(modified.gameObject);
                     return;
                 }
+
                 int currentStackEmptySpace = maxStackSizePerSlot - current.stackSize;
+
                 if (currentStackEmptySpace > 0)
                 {
                     current.stackSize += currentStackEmptySpace;
@@ -164,12 +162,12 @@ public class LimitedItemContainer : ItemContainer
                 if (amount == -1 || item.stackSize <= amount)
                 {
                     containerItems.Remove(item);
-
                 }
                 else
                 {
                     item.stackSize -= amount;
                 }
+
                 RemoveItemEvent(item, amount, isMoving);
                 return;
             }

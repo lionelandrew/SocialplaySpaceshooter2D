@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using SocialPlay.ItemSystems;
 
-
 [RequireComponent(typeof(TweenPosition))]
 public class AutoFlyIn : MonoBehaviour
 {
@@ -11,11 +10,8 @@ public class AutoFlyIn : MonoBehaviour
     bool isCurrentlyActive = false;
 
     public int inDirPosition, outDirPosition;
-
     private Vector3 outPos, inPos;
-
     public direction myMoveDirection;
-
     private Vector3 startPos;
 
     public enum direction
@@ -37,7 +33,6 @@ public class AutoFlyIn : MonoBehaviour
 
         startPos = this.transform.localPosition;
         UpdatePos();
-
 
         if (myContainerDisplay != null)
         {
@@ -88,7 +83,7 @@ public class AutoFlyIn : MonoBehaviour
         UpdatePos();
         tween.from = this.transform.localPosition;
         tween.to = inPos;
-        tween.PlayForward();
+        //tween.PlayForward();
         tween.enabled = true;
         isCurrentlyActive = true;
     }
@@ -98,11 +93,10 @@ public class AutoFlyIn : MonoBehaviour
         UpdatePos();
         tween.from = this.transform.localPosition;
         tween.to = outPos;
-        tween.PlayForward();
+       // tween.PlayForward();
         tween.enabled = true;
         isCurrentlyActive = false;
     }
-
 
     void UpdatePos()
     {
@@ -113,26 +107,32 @@ public class AutoFlyIn : MonoBehaviour
                 inPos.x = inDirPosition;
                 outPos.x = outDirPosition;
                 break;
+
             case direction.vertical:
                 inPos.y = inDirPosition;
                 outPos.y = outDirPosition;
                 break;
+
             case direction.top:
                 inPos.y = inDirPosition;
                 outPos.y = inDirPosition + Screen.height;
                 break;
+
             case direction.bottom:
                 inPos.y = inDirPosition;
                 outPos.y = inDirPosition - Screen.height;
                 break;
+
             case direction.right:
                 inPos.x = inDirPosition;
                 outPos.x = inDirPosition + Screen.height;
                 break;
+
             case direction.left:
                 inPos.x = inDirPosition;
                 outPos.x = inDirPosition - Screen.height;
                 break;
+
             default:
                 break;
         }
