@@ -396,6 +396,7 @@
      <Compile Include="Assets\myScripts\PlayerInventory.cs" />
      <Compile Include="Assets\myScripts\PlayerPickup.cs" />
      <Compile Include="Assets\myScripts\PlayerStore.cs" />
+     <Compile Include="Assets\myScripts\PressMain.cs" />
      <Compile Include="Assets\myScripts\QuitGame.cs" />
      <Compile Include="Assets\myScripts\RotateParticle.cs" />
      <Compile Include="Assets\myScripts\SpaceShooterStore.cs" />

@@ -5,6 +5,6 @@ public class StartGame : MonoBehaviour
 {
 	void OnClick () 
 	{
-		Application.LoadLevel("Done_Main");
+		Application.LoadLevel("Inventory");
 	}
 }
