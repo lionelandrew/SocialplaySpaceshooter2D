@@ -31,7 +31,7 @@ public class SlotData : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        foreach (SlotItemFilter filter in GetComponents<SlotItemFilter>())
+        foreach (SlotItemfilter filter in GetComponents<SlotItemfilter>())
         {
             filters.Add(filter.filter);
         }
