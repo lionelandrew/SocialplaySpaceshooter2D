@@ -393,9 +393,12 @@
      <Compile Include="Assets\myScripts\DestroyEnemies.cs" />
      <Compile Include="Assets\myScripts\DestroyParticles.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
+     <Compile Include="Assets\myScripts\PlayerInventory.cs" />
      <Compile Include="Assets\myScripts\PlayerPickup.cs" />
+     <Compile Include="Assets\myScripts\PlayerStore.cs" />
      <Compile Include="Assets\myScripts\QuitGame.cs" />
      <Compile Include="Assets\myScripts\RotateParticle.cs" />
+     <Compile Include="Assets\myScripts\SpaceShooterStore.cs" />
      <Compile Include="Assets\myScripts\SpawnParticleEffect.cs" />
      <Compile Include="Assets\myScripts\StartGame.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
