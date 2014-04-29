@@ -30,7 +30,7 @@ public class DestroyEnemies : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Boundary" || other.tag == "Enemy")
+        if (other.tag == "Boundary" || other.tag == "Enemy" || other.tag == "Asteroids")
 		{
 			return;
 		}
@@ -47,7 +47,7 @@ public class DestroyEnemies : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
 		}
-        else if (other.tag == "Shot" && GameObject.FindGameObjectWithTag("Asteriods"))
+        else if (other.tag == "Shot" && GameObject.FindGameObjectWithTag("Asteroids"))
         {
             number = UnityEngine.Random.Range(1, 6);
 
