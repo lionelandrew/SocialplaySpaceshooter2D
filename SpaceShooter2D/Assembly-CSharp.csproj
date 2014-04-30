@@ -417,6 +417,7 @@
      <None Include="Assets\SocialPlay-SDK\Font Resource\Arial 16.fnt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
      <None Include="Assets\SocialPlay-SDK\Store\Atlas\Fonts\raw\medieval22.txt" />
      <None Include="Assets\SocialPlay-SDK\Font Resource\Franklin 22.fnt" />
@@ -467,6 +468,10 @@
  <Reference Include="SocialPlay.Service">
  <HintPath>Assets\SocialPlay-SDK\DLLS\SocialPlay.Service.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{2FD997E8-FC00-E9BC-37AC-BAB16DBE963A}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

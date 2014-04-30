@@ -417,6 +417,7 @@
      <None Include="Assets\SocialPlay-SDK\Font Resource\Arial 16.fnt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
      <None Include="Assets\SocialPlay-SDK\Store\Atlas\Fonts\raw\medieval22.txt" />
      <None Include="Assets\SocialPlay-SDK\Font Resource\Franklin 22.fnt" />
@@ -446,6 +447,9 @@
      <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
      <None Include="Assets\SocialPlay-SDK\Store\Atlas\Fonts\raw\medieval18.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="IFacebook">
  <HintPath>Assets\Facebook\Scripts\IFacebook.dll</HintPath>
  </Reference>
