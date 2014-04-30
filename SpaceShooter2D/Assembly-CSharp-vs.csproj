@@ -392,6 +392,7 @@
      <Compile Include="Assets\SocialPlay-SDK\Store\StoreOrganizer.cs" />
      <Compile Include="Assets\myScripts\DestroyEnemies.cs" />
      <Compile Include="Assets\myScripts\DestroyParticles.cs" />
+     <Compile Include="Assets\myScripts\HitESCToQuit.cs" />
      <Compile Include="Assets\myScripts\LoadSceneContainers.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\myScripts\PlayerInventory.cs" />
