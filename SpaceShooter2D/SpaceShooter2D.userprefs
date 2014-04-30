@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Projects\BOXX\Assets\Scripts\RedCube.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SocialPlay-SDK\Scripts\Item\NGUIContainerGameItem.cs">
     <Files>
-      <File FileName="..\..\..\Projects\BOXX\Assets\Scripts\Catchers\JTG_Catcher.cs" Line="8" Column="36" />
-      <File FileName="..\..\..\Projects\BOXX\Assets\Scripts\RedCube.cs" Line="9" Column="3" />
+      <File FileName="Assets\SocialPlay-SDK\Scripts\Item\NGUIContainerGameItem.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
