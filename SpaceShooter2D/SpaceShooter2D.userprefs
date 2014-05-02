@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SocialPlay-SDK\Scripts\Item\NGUIContainerGameItem.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myScripts\DestroyEnemies.cs">
     <Files>
-      <File FileName="Assets\SocialPlay-SDK\Scripts\Item\NGUIContainerGameItem.cs" Line="1" Column="1" />
+      <File FileName="..\..\csrpg\Assets\SocialPlay-SDK\Scripts\Containers\ContainerActions\ItemFilters\BehaviourItemFilter.cs" Line="1" Column="1" />
+      <File FileName="Assets\SocialPlay-SDK\Scripts\Containers\NGUILimitedGridItemContainerDisplay.cs" Line="1" Column="1" />
+      <File FileName="..\..\csrpg\Assets\SocialPlay-SDK\Scripts\Containers\SlottedItemContainerOnLoadInserter.cs" Line="1" Column="1" />
+      <File FileName="Assets\myScripts\DestroyEnemies.cs" Line="43" Column="61" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
