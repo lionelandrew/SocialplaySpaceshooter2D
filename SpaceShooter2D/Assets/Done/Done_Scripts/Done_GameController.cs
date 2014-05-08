@@ -15,7 +15,7 @@ public class Done_GameController : MonoBehaviour
 	public GUIText restartText;
 	public GUIText gameOverText;
 	
-	private bool gameOver;
+	public bool gameOver;
 	private bool restart;
 	private int score;
 	private int highScore;
@@ -42,6 +42,11 @@ public class Done_GameController : MonoBehaviour
                 Application.LoadLevel("mainMenu"); 
 			}
 		}
+
+        if (gameOver)
+        {
+            GameOver();
+        }
 	}
 	
 	IEnumerator SpawnWaves ()

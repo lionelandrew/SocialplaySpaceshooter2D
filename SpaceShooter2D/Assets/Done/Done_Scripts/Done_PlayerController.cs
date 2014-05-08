@@ -21,7 +21,22 @@ public class Done_PlayerController : MonoBehaviour
 
 	public float playerHealth = 0;
 	public float playerHealthMax = 0;
-	
+
+    private int die = 0;
+    private bool hasDied = false;
+
+    private Done_GameController gameController;
+    public GameObject playerExplosion;
+
+    void Start()
+    {
+        GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
+        if (gameControllerObject != null)
+        {
+            gameController = gameControllerObject.GetComponent<Done_GameController>();
+        }
+    }
+
 	void Update ()
 	{
 		if (Input.GetButton("Fire1") && Time.time > nextFire) 
@@ -53,5 +68,16 @@ public class Done_PlayerController : MonoBehaviour
     public void ApplyDamage(int amount)
     {
         playerHealth -= amount;
+        if (playerHealth < 1)
+        {
+            hasDied = true;
+            die++;
+            if (die == 1 && hasDied)
+            {
+                Instantiate(playerExplosion, transform.position, transform.rotation);
+                gameController.GameOver();
+                Destroy(this.gameObject);
+            }
+        }	
     }
 }

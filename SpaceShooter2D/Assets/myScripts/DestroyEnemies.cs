@@ -9,13 +9,13 @@ using Newtonsoft.Json.Linq;
 public class DestroyEnemies : MonoBehaviour 
 {
     public GameObject explosion;
-    public GameObject playerExplosion;
 	public int scoreValue;
 	private Done_GameController gameController;
     private Done_PlayerController script;
     private GameObject player;
 	public ItemGetter gameItemGetter;
     private int number;
+    public int damage;
 
 	void Start ()
 	{
@@ -24,10 +24,12 @@ public class DestroyEnemies : MonoBehaviour
 		{
 			gameController = gameControllerObject.GetComponent <Done_GameController>();
 		}
-		if (gameController == null)
-		{
-			Debug.Log ("Cannot find 'GameController' script");
-		}
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            script = player.GetComponent<Done_PlayerController>();
+        }
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -42,14 +44,14 @@ public class DestroyEnemies : MonoBehaviour
 			Instantiate(explosion, transform.position, transform.rotation);
 		}
 
-        if (other.tag == "Shot" && GameObject.FindGameObjectWithTag("Enemy"))
+        if (other.tag == "Shot" && gameObject.tag == "Enemy")
 		{
 			Death ();
             gameController.AddScore(scoreValue);
             Destroy(other.gameObject);
             Destroy(gameObject);
 		}
-        else if (other.tag == "Shot" && GameObject.FindGameObjectWithTag("Asteroids"))
+        else if (other.tag == "Shot" && gameObject.tag == "Asteroids")
         {
             number = UnityEngine.Random.Range(1, 6);
 
@@ -67,15 +69,16 @@ public class DestroyEnemies : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        if (other.tag == "Player")
+        else if (other.tag == "Player" && gameObject.tag == "Asteroids" || other.tag == "Player" && gameObject.tag == "Enemy")
         {
-            Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-            gameController.GameOver();
+            Destroy(gameObject);
         }
 
-		Destroy (other.gameObject);
-		Destroy (gameObject);
+        if (script != null)
+        {
+            script.ApplyDamage(damage);
+        }
+
 	}
 	
 	void Death()
