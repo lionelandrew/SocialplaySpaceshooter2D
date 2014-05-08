@@ -3,45 +3,51 @@ using System.Collections;
 
 public class Done_DestroyByContact : MonoBehaviour
 {
-	public GameObject explosion;
 	public GameObject playerExplosion;
-	public int scoreValue;
 	private Done_GameController gameController;
+    private Done_PlayerController script;
+    private GameObject player;
+    
+    private int damage;
+    public int minDamage;
+    public int maxDamage;
 
 	void Start ()
 	{
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            script = player.GetComponent<Done_PlayerController>();
+        }
+
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
 		if (gameControllerObject != null)
 		{
 			gameController = gameControllerObject.GetComponent <Done_GameController>();
 		}
-		if (gameController == null)
-		{
-			Debug.Log ("Cannot find 'GameController' script");
-		}
 	}
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Boundary" || other.tag == "Enemy")
-		{
-			return;
-		}
+ 
 
-		if (explosion != null)
-		{
-			Instantiate(explosion, transform.position, transform.rotation);
-		}
+        if (other.tag == "Boundary" || other.tag == "Enemy")
+        {
+            return;
+        }
 
-		if (other.tag == "Player")
-		{
-			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-			gameController.GameOver();
-		}
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            damage = Random.Range(minDamage, maxDamage + 1);
+            script.playerHealth -= damage;
+        }
 
-		gameController.AddScore(scoreValue);
-		Destroy (other.gameObject);
-		Destroy (gameObject);
+        if (GameObject.FindGameObjectWithTag("Asteroids") || GameObject.FindGameObjectWithTag("Crate"))
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+
+        Destroy(this.gameObject);
 	}
-
 }

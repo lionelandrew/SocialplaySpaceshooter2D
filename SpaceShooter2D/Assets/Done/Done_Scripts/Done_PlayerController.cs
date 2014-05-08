@@ -18,6 +18,9 @@ public class Done_PlayerController : MonoBehaviour
 	public float fireRate;
 	 
 	private float nextFire;
+
+	public float playerHealth = 0;
+	public float playerHealthMax = 0;
 	
 	void Update ()
 	{
@@ -46,4 +49,9 @@ public class Done_PlayerController : MonoBehaviour
 		
 		rigidbody.rotation = Quaternion.Euler (0.0f, 0.0f, rigidbody.velocity.x * -tilt);
 	}
+
+    public void ApplyDamage(int amount)
+    {
+        playerHealth -= amount;
+    }
 }

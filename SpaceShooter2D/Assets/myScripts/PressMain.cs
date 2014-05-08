@@ -3,14 +3,16 @@ using System.Collections;
 
 public class PressMain : MonoBehaviour 
 {
-    private bool isPaused = true;
+    public bool isPaused = true;
     public GameObject carmera;
     public GameObject carmera1;
+    public GameObject player;
 
     void Start()
     {
         carmera.SetActive(true);
         carmera1.SetActive(false);
+        player.SetActive(false);
         PauseGameMode();
     }
 
@@ -22,6 +24,7 @@ public class PressMain : MonoBehaviour
             {
                 carmera.SetActive(false);
                 carmera1.SetActive(true);
+                player.SetActive(true);
                 ResumeGameMode();
             }
 		}

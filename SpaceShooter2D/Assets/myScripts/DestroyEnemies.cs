@@ -12,6 +12,8 @@ public class DestroyEnemies : MonoBehaviour
     public GameObject playerExplosion;
 	public int scoreValue;
 	private Done_GameController gameController;
+    private Done_PlayerController script;
+    private GameObject player;
 	public ItemGetter gameItemGetter;
     private int number;
 
@@ -30,7 +32,7 @@ public class DestroyEnemies : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-        if (other.tag == "Boundary" || other.tag == "Enemy" || other.tag == "Asteroids")
+        if (other.tag == "Boundary" || other.tag == "EnemiesShot" || other.tag == "Asteroids")
 		{
 			return;
 		}
