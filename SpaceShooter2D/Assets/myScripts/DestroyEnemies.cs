@@ -13,8 +13,6 @@ public class DestroyEnemies : MonoBehaviour
     public ItemGetter gameItemGetter;
 	private Done_GameController gameController;
     private Characters script;
-    private Characters script1;
-    private Characters script2;
 
     public int scoreValue;
     private int number;
@@ -22,8 +20,6 @@ public class DestroyEnemies : MonoBehaviour
 
 	void Start ()
 	{
-        damage = scoreValue;
-
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
 		if (gameControllerObject != null)
 		{
@@ -35,22 +31,12 @@ public class DestroyEnemies : MonoBehaviour
         {
             script = player.GetComponent<Characters>();
         }
-
-        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
-        if (enemy != null)
-        {
-            script1 = enemy.GetComponent<Characters>();
-        }
-
-        GameObject asteroids = GameObject.FindGameObjectWithTag("Asteroids");
-        if (asteroids != null)
-        {
-            script2 = asteroids.GetComponent<Characters>();
-        }
 	}
 
 	void OnTriggerEnter (Collider other)
 	{
+        damage = scoreValue;
+
         if (other.tag == "Boundary" || other.tag == "EnemiesShot" || other.tag == "Asteroids")
 		{
 			return;
