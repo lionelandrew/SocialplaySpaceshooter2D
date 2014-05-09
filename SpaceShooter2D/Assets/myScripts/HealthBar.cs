@@ -11,25 +11,24 @@ public class HealthBar : MonoBehaviour
     private float normalisedHealth;
 
     public Texture2D bgImage;
-    public Texture2D fgImage;
 
     private GUIStyle style;
-    private Done_PlayerController script;
+    private Characters script;
 
     void Start()
     {
-        script = GetComponent<Done_PlayerController>();
+        script = GetComponent<Characters>();
         style = new GUIStyle();
     }
 
 	void OnGUI()
 	{
-        currentHealth = script.playerHealth;
-        maxHealth = script.playerHealthMax;
+        currentHealth = script.currentHealth;
+        maxHealth = script.maxHealth;
 
-        Rect rectBackGround = new Rect(startPoint.x, startPoint.y, 128, 32);
-        normalisedHealth = ((float)currentHealth / maxHealth) * 124;
-        Rect rectForeGround = new Rect(2, 3, normalisedHealth, 8);
+        Rect rectBackGround = new Rect(startPoint.x, startPoint.y, 200, 32);
+        normalisedHealth = ((float)currentHealth / maxHealth) * 194;
+        Rect rectForeGround = new Rect(2, 3, normalisedHealth, 14);
        
         //Draw background
         GUI.BeginGroup(rectBackGround, bgImage);

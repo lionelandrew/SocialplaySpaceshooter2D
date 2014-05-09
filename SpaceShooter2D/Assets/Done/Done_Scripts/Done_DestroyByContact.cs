@@ -4,17 +4,18 @@ using System.Collections;
 public class Done_DestroyByContact : MonoBehaviour
 {
 	public GameObject playerExplosion;
-    private Done_PlayerController script;
+    private Characters script;
     
     public int minDamage;
     public int maxDamage;
+    private int damage;
 
 	void Start ()
 	{
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            script = player.GetComponent<Done_PlayerController>();
+            script = player.GetComponent<Characters>();
         }
 	}
 
@@ -25,13 +26,13 @@ public class Done_DestroyByContact : MonoBehaviour
             return;
         }
 
-        if (script != null)
+        if (script != null && other.tag == "Player")
         {
-            int damage = Random.Range(minDamage, maxDamage + 1);
+            damage = Random.Range(minDamage, maxDamage + 1);
             script.ApplyDamage(damage);
         }
 
-        if (other.gameObject.tag == "Asteroids" || other.gameObject.tag == "Crate")
+        if (other.tag == "Asteroids" || other.tag == "Crate")
         {
             Destroy(other.gameObject);
         }

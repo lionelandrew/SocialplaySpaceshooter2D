@@ -70,7 +70,6 @@
      <Compile Include="Assets\Facebook\Scripts\IOSFacebookLoader.cs" />
      <Compile Include="Assets\Facebook\Scripts\NativeDialogModes.cs" />
      <Compile Include="Assets\Facebook\TestPlatformLogin.cs" />
-     <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -391,8 +390,11 @@
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByProperties.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\Script\filters\FilterItemByTags.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Store\StoreOrganizer.cs" />
+     <Compile Include="Assets\myScripts\Characters.cs" />
      <Compile Include="Assets\myScripts\DestroyEnemies.cs" />
      <Compile Include="Assets\myScripts\DestroyParticles.cs" />
+     <Compile Include="Assets\myScripts\DropItems.cs" />
+     <Compile Include="Assets\myScripts\HealthBar.cs" />
      <Compile Include="Assets\myScripts\HitESCToQuit.cs" />
      <Compile Include="Assets\myScripts\LoadSceneContainers.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />

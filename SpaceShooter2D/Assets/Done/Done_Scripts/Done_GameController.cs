@@ -81,7 +81,7 @@ public class Done_GameController : MonoBehaviour
 	
 	void UpdateScore ()
 	{
-		scoreText.text = "Player Score: " + score;
+		scoreText.text = "Score: " + score;
 	}
 
 	void UpdateHighScore ()

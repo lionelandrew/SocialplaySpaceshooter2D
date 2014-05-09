@@ -9,16 +9,21 @@ using Newtonsoft.Json.Linq;
 public class DestroyEnemies : MonoBehaviour 
 {
     public GameObject explosion;
-	public int scoreValue;
+
+    public ItemGetter gameItemGetter;
 	private Done_GameController gameController;
-    private Done_PlayerController script;
-    private GameObject player;
-	public ItemGetter gameItemGetter;
+    private Characters script;
+    private Characters script1;
+    private Characters script2;
+
+    public int scoreValue;
     private int number;
-    public int damage;
+    private int damage;
 
 	void Start ()
 	{
+        damage = scoreValue;
+
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
 		if (gameControllerObject != null)
 		{
@@ -28,7 +33,19 @@ public class DestroyEnemies : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            script = player.GetComponent<Done_PlayerController>();
+            script = player.GetComponent<Characters>();
+        }
+
+        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
+        if (enemy != null)
+        {
+            script1 = enemy.GetComponent<Characters>();
+        }
+
+        GameObject asteroids = GameObject.FindGameObjectWithTag("Asteroids");
+        if (asteroids != null)
+        {
+            script2 = asteroids.GetComponent<Characters>();
         }
 	}
 
@@ -74,11 +91,16 @@ public class DestroyEnemies : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (script != null)
+        if (script != null && other.tag == "Player")
         {
             script.ApplyDamage(damage);
         }
 
+        if (other.tag == "Asteroids" || other.tag == "Crate")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
 	}
 	
 	void Death()
