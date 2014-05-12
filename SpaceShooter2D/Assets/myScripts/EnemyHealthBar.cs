@@ -25,7 +25,7 @@ public class EnemyHealthBar : MonoBehaviour
     {
         currentHealth = script.currentHealth;
         maxHealth = script.maxHealth;
-        Rect rectBackGround = new Rect(-(Camera.main.WorldToScreenPoint(-target.position).x - 940), (Camera.main.WorldToScreenPoint(-target.position).y + 340), 100, 16);
+        Rect rectBackGround = new Rect(-(Camera.main.WorldToScreenPoint(-target.position).x - 975), (Camera.main.WorldToScreenPoint(-target.position).y + 340), 100, 16);
         normalisedHealth = ((float)currentHealth / maxHealth) * 100;
         Rect rectForeGround = new Rect(2, 3, normalisedHealth, 6);
 
