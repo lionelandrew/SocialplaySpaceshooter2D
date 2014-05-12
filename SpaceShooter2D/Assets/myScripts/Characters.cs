@@ -10,6 +10,8 @@ public class Characters : MonoBehaviour
     private bool hasDied = false;
 
     private Done_GameController gameController;
+    private DestroyEnemies drop;
+
     public GameObject playerExplosion;
 
     void Start()
@@ -37,6 +39,9 @@ public class Characters : MonoBehaviour
                     gameController.GameOver();
                     Destroy(this.gameObject);
                 }
+
+                if (gameObject.tag == "Enemy")
+                {}
             }
         }
     }

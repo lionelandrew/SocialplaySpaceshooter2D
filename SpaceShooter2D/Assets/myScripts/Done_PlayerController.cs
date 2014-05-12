@@ -19,6 +19,8 @@ public class Done_PlayerController : MonoBehaviour
 	 
 	private float nextFire;
 
+    public int damage = 0;
+
 	void Update ()
 	{
 		if (Input.GetButton("Fire1") && Time.time > nextFire) 

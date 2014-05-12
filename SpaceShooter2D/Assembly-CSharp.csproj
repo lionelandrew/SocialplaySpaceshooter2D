@@ -53,7 +53,6 @@
      <Compile Include="Assets\Done\Done_Scripts\Done_EvasiveManeuver.cs" />
      <Compile Include="Assets\Done\Done_Scripts\Done_GameController.cs" />
      <Compile Include="Assets\Done\Done_Scripts\Done_Mover.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_PlayerController.cs" />
      <Compile Include="Assets\Done\Done_Scripts\Done_RandomRotator.cs" />
      <Compile Include="Assets\Done\Done_Scripts\Done_WeaponController.cs" />
      <Compile Include="Assets\Facebook\Examples\Scripts\InteractiveConsole.cs" />
@@ -324,7 +323,6 @@
      <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\Selectors\TagItemSelector.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Scripts\Item\StandardGameObjectInitilizer.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Scripts\LoginItemContainer.cs" />
-     <Compile Include="Assets\SocialPlay-SDK\Scripts\LoginWelcomeMessage.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\CloudGoodsSetup.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\GameAuthentication.cs" />
      <Compile Include="Assets\SocialPlay-SDK\Scripts\Setup\ITooltipSetup.cs" />
@@ -393,10 +391,13 @@
      <Compile Include="Assets\myScripts\Characters.cs" />
      <Compile Include="Assets\myScripts\DestroyEnemies.cs" />
      <Compile Include="Assets\myScripts\DestroyParticles.cs" />
+     <Compile Include="Assets\myScripts\Done_PlayerController.cs" />
      <Compile Include="Assets\myScripts\DropItems.cs" />
+     <Compile Include="Assets\myScripts\EnemyHealthBar.cs" />
      <Compile Include="Assets\myScripts\HealthBar.cs" />
      <Compile Include="Assets\myScripts\HitESCToQuit.cs" />
      <Compile Include="Assets\myScripts\LoadSceneContainers.cs" />
+     <Compile Include="Assets\myScripts\LoginWelcomeMessage.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\myScripts\PlayerInventory.cs" />
      <Compile Include="Assets\myScripts\PlayerPickup.cs" />
