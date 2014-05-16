@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Done_GameController : MonoBehaviour
 {
@@ -17,17 +18,21 @@ public class Done_GameController : MonoBehaviour
 	
 	public bool gameOver;
 	private bool restart;
-	private int score;
+	public int score;
 	private int highScore;
+
+    List<Scores> highscore1;
 	
 	void Start ()
 	{
+        highscore1 = new List<Scores>();
+        highscore1 = HighScoreBoard._instance.GetHighScore();
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
 		gameOverText.text = "";
 		score = 0;
-		highScore = 2000;
+        highScore = highscore1[0].score;
 		UpdateScore ();
 		UpdateHighScore ();
 		StartCoroutine (SpawnWaves ());
@@ -86,7 +91,7 @@ public class Done_GameController : MonoBehaviour
 
 	void UpdateHighScore ()
 	{
-		highScoreText.text = "HighScore: " + highScore;
+		highScoreText.text = "Local HighScore: " + highScore;
 	}
 	
 	public void GameOver ()

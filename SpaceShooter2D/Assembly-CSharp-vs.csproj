@@ -391,13 +391,17 @@
      <Compile Include="Assets\myScripts\Characters.cs" />
      <Compile Include="Assets\myScripts\DestroyEnemies.cs" />
      <Compile Include="Assets\myScripts\DestroyParticles.cs" />
+     <Compile Include="Assets\myScripts\DisplayHighScores.cs" />
      <Compile Include="Assets\myScripts\Done_PlayerController.cs" />
      <Compile Include="Assets\myScripts\DropItems.cs" />
      <Compile Include="Assets\myScripts\EnemyHealthBar.cs" />
+     <Compile Include="Assets\myScripts\GoTohighScores.cs" />
      <Compile Include="Assets\myScripts\HealthBar.cs" />
+     <Compile Include="Assets\myScripts\HighScoreBoard.cs" />
      <Compile Include="Assets\myScripts\HitESCToQuit.cs" />
      <Compile Include="Assets\myScripts\LoadSceneContainers.cs" />
      <Compile Include="Assets\myScripts\LoginWelcomeMessage.cs" />
+     <Compile Include="Assets\myScripts\MenuController.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\myScripts\PlayerInventory.cs" />
      <Compile Include="Assets\myScripts\PlayerPickup.cs" />
@@ -408,6 +412,7 @@
      <Compile Include="Assets\myScripts\SpaceShooterStore.cs" />
      <Compile Include="Assets\myScripts\SpawnParticleEffect.cs" />
      <Compile Include="Assets\myScripts\StartGame.cs" />
+     <Compile Include="Assets\myScripts\ToMainMenu.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.7.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
