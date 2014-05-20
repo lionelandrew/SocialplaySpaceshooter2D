@@ -12,6 +12,7 @@ public class DisplayHighScores : MonoBehaviour
     void Start()
     {
         highscore = new List<Scores>();
+        highscore = HighScoreBoard._instance.GetHighScore();
         guiStyle = new GUIStyle();
         guiStyle1 = new GUIStyle();
         guiStyle.fontSize = 40;
@@ -23,7 +24,6 @@ public class DisplayHighScores : MonoBehaviour
     void OnGUI()
     {
         GUILayout.BeginArea(new Rect(160, 20, 3000, 3000));
-        highscore = HighScoreBoard._instance.GetHighScore();
 
         GUILayout.Space(60);
 

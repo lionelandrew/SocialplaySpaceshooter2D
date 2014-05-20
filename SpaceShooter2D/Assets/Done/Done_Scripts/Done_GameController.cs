@@ -19,27 +19,28 @@ public class Done_GameController : MonoBehaviour
 	public bool gameOver;
 	private bool restart;
 	public int score;
-	private int highScore;
+	private int topHighScore;
 
-    List<Scores> highscore1;
+    List<Scores> localHighScore;
 	
 	void Start ()
 	{
-        highscore1 = new List<Scores>();
-        highscore1 = HighScoreBoard._instance.GetHighScore();
+        localHighScore = new List<Scores>();
+        localHighScore = HighScoreBoard._instance.GetHighScore();
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
 		gameOverText.text = "";
 		score = 0;
-        highScore = highscore1[0].score;
-		UpdateScore ();
-		UpdateHighScore ();
+        topHighScore = localHighScore[0].score;
 		StartCoroutine (SpawnWaves ());
 	}
-	
+
 	void Update ()
 	{
+        UpdateScore();
+        UpdateHighScore();
+
 		if (restart)
 		{
 			if (Input.GetKeyDown (KeyCode.R))
@@ -91,7 +92,14 @@ public class Done_GameController : MonoBehaviour
 
 	void UpdateHighScore ()
 	{
-		highScoreText.text = "Local HighScore: " + highScore;
+        if (score < topHighScore)
+        {
+            highScoreText.text = "Local HighScore: " + topHighScore;
+        }
+        else if(score > topHighScore)
+        {
+            highScoreText.text = "Local HighScore: " + score;
+        }
 	}
 	
 	public void GameOver ()
