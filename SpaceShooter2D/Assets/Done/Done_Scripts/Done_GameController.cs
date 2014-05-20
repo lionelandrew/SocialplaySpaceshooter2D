@@ -22,17 +22,26 @@ public class Done_GameController : MonoBehaviour
 	private int topHighScore;
 
     List<Scores> localHighScore;
+	private int emptyList;
 	
 	void Start ()
 	{
         localHighScore = new List<Scores>();
         localHighScore = HighScoreBoard._instance.GetHighScore();
+		emptyList = localHighScore.Count;
 		gameOver = false;
 		restart = false;
 		restartText.text = "";
 		gameOverText.text = "";
 		score = 0;
-        topHighScore = localHighScore[0].score;
+		
+		if (localHighScore.Count == 0)
+		{
+			topHighScore = 0;
+		}
+		else 
+			topHighScore = localHighScore[0].score;
+
 		StartCoroutine (SpawnWaves ());
 	}
 
