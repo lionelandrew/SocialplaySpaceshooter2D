@@ -415,6 +415,7 @@
      <Compile Include="Assets\myScripts\SpaceShooterStore.cs" />
      <Compile Include="Assets\myScripts\SpawnParticleEffect.cs" />
      <Compile Include="Assets\myScripts\StartGame.cs" />
+     <Compile Include="Assets\myScripts\Stats.cs" />
      <Compile Include="Assets\myScripts\ToMainMenu.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.7.txt" />
