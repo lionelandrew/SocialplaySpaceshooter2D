@@ -5,6 +5,6 @@ public class GoTohighScores : MonoBehaviour
 {
     void OnClick()
     {
-        Application.LoadLevel("highScoreBoard");
+        Application.LoadLevel("highscore2");
     }
 }
