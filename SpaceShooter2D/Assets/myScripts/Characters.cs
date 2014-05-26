@@ -9,7 +9,7 @@ public class Characters : MonoBehaviour
     private int die = 0;
     private bool hasDied = false;
 
-    private Done_GameController gameController;
+    private GameControllerNGUI gameController;
     private DestroyEnemies drop;
 
     public GameObject playerExplosion;
@@ -20,7 +20,7 @@ public class Characters : MonoBehaviour
         GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
         if (gameControllerObject != null)
         {
-            gameController = gameControllerObject.GetComponent<Done_GameController>();
+            gameController = gameControllerObject.GetComponent<GameControllerNGUI>();
         }
     }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class MenuController : MonoBehaviour
 {
-    private Done_GameController gameController;
+    private GameControllerNGUI gameController;
     string name = "";
     int score = 0;
     List<Scores> highscore;
@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
         GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
         if (gameControllerObject != null)
         {
-            gameController = gameControllerObject.GetComponent<Done_GameController>();
+            gameController = gameControllerObject.GetComponent<GameControllerNGUI>();
         }
 
         highscore = new List<Scores>();

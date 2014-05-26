@@ -11,7 +11,7 @@ public class DestroyEnemies : MonoBehaviour
     public GameObject explosion;
 
     public ItemGetter gameItemGetter;
-    private Done_GameController gameController;
+    private GameControllerNGUI gameController;
     private Done_PlayerController playerController;
     private Characters script;
     private Characters script1;
@@ -25,7 +25,7 @@ public class DestroyEnemies : MonoBehaviour
         GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
         if (gameControllerObject != null)
         {
-            gameController = gameControllerObject.GetComponent<Done_GameController>();
+            gameController = gameControllerObject.GetComponent<GameControllerNGUI>();
         }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
