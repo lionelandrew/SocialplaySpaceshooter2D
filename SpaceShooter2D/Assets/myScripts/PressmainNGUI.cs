@@ -24,6 +24,7 @@ public class PressmainNGUI : MonoBehaviour
         {
             if (isPaused)
             {
+                this.transform.Rotate(transform.rotation.x + 90, transform.rotation.y, transform.rotation.z);
                 inventory.SetActive(false);
                 HUD.SetActive(true);
                 carmera.SetActive(true);

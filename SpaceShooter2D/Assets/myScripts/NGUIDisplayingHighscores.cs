@@ -17,6 +17,7 @@ public class NGUIDisplayingHighscores : MonoBehaviour
 
     void DisplayHighscores()
     {
+        
         for (int i = 0; i < highscore.Count; i++)
         {
             label.text += highscore[i].score + "\n";
