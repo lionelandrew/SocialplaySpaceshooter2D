@@ -8,13 +8,22 @@ public class PressmainNGUI : MonoBehaviour
     public GameObject HUD;
     public GameObject carmera;
     public GameObject player;
+    public GameObject nameInput;
+    private GameControllerNGUI gameController;
 
     void Start()
     {
+        GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
+        if (gameControllerObject != null)
+        {
+            gameController = gameControllerObject.GetComponent<GameControllerNGUI>();
+        }
+
         inventory.SetActive(true);
         HUD.SetActive(false);
         carmera.SetActive(false);
         player.SetActive(false);
+        nameInput.SetActive(false);
         PauseGameMode();
     }
 
@@ -31,6 +40,11 @@ public class PressmainNGUI : MonoBehaviour
                 player.SetActive(true);
                 ResumeGameMode();
             }
+        }
+
+        if (gameController.gameOver && nameInput.GetComponent<MenuControllerNGUI>().entered == false)
+        {
+            nameInput.SetActive(true);
         }
     }
 

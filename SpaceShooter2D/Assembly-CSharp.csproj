@@ -404,6 +404,7 @@
      <Compile Include="Assets\myScripts\LoadSceneContainers.cs" />
      <Compile Include="Assets\myScripts\LoginWelcomeMessage.cs" />
      <Compile Include="Assets\myScripts\MenuController.cs" />
+     <Compile Include="Assets\myScripts\MenuControllerNGUI.cs" />
      <Compile Include="Assets\myScripts\MusicManager.cs" />
      <Compile Include="Assets\myScripts\MyUnitySingleton.cs" />
      <Compile Include="Assets\myScripts\NGUIDisplayNames.cs" />

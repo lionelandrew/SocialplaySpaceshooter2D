@@ -52,7 +52,7 @@ public class GameControllerNGUI : MonoBehaviour
 
         if (restart)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.F1))
             {
                 Application.LoadLevel("mainMenu");
             }
@@ -81,7 +81,7 @@ public class GameControllerNGUI : MonoBehaviour
 
             if (gameOver)
             {
-                restartText.text = "Press 'R' for MainMenu";
+                restartText.text = "Press 'F1' for MainMenu";
                 restart = true;
                 break;
             }

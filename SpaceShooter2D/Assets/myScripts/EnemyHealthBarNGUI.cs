@@ -27,10 +27,10 @@ public class EnemyHealthBarNGUI : MonoBehaviour
        
        // _healthBar.transform.position = (-(Camera.main.WorldToScreenPoint(-target.position).x - 975), (Camera.main.WorldToScreenPoint(-target.position).y + 340), 100, 16)
         
-        currentHealth = script.currentHealth;
-        maxHealth = script.maxHealth;
-        normalisedHealth = ((float)currentHealth / maxHealth) * 1;
-        _healthBar.value = normalisedHealth;
+        //currentHealth = script.currentHealth;
+        //maxHealth = script.maxHealth;
+       // normalisedHealth = ((float)currentHealth / maxHealth) * 1;
+       // _healthBar.value = normalisedHealth;
         
     }
 }
