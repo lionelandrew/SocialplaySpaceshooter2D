@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PressmainNGUI : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PressmainNGUI : MonoBehaviour
     public GameObject player;
     public GameObject nameInput;
     private GameControllerNGUI gameController;
+    List<Scores> highscore;
 
     void Start()
     {
@@ -19,6 +21,8 @@ public class PressmainNGUI : MonoBehaviour
             gameController = gameControllerObject.GetComponent<GameControllerNGUI>();
         }
 
+        highscore = new List<Scores>();
+        highscore = HighScoreBoard._instance.GetHighScore();
         inventory.SetActive(true);
         HUD.SetActive(false);
         carmera.SetActive(false);
@@ -42,9 +46,16 @@ public class PressmainNGUI : MonoBehaviour
             }
         }
 
-        if (gameController.gameOver && nameInput.GetComponent<MenuControllerNGUI>().entered == false)
+        if(gameController.gameOver  && nameInput.GetComponent<MenuControllerNGUI>().entered == false)
         {
-            nameInput.SetActive(true);
+            if (highscore.Count == 0 || highscore.Count < 10)
+           {
+                nameInput.SetActive(true);
+           }
+           else if (highscore[highscore.Count - 1].score < gameController.score)
+           {
+                nameInput.SetActive(true);
+           }
         }
     }
 

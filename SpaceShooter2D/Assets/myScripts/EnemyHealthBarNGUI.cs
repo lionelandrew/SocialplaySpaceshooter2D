@@ -3,19 +3,27 @@ using System.Collections;
 
 public class EnemyHealthBarNGUI : MonoBehaviour
 {
-    UISlider _healthBar;
+    UISlider[] _healthBar;
     private float currentHealth;
     private float maxHealth;
     private float normalisedHealth;
-    private Characters script;
+    private Characters[] script;
+    GameObject[] healthBar;
+    GameObject[] enemy;
     int i = 0;
 
     void Awake()
     {
-        GameObject healthBar = GameObject.FindGameObjectWithTag("EnemyHealthBar");
+        healthBar = GameObject.FindGameObjectsWithTag("EnemyHealthBar");
         if (healthBar != null)
         {
-            _healthBar = GetComponent<UISlider>();
+            _healthBar = GetComponents<UISlider>();
+        }
+
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemy != null)
+        {
+            script = GetComponents<Characters>();
         }
     }
 
@@ -23,14 +31,20 @@ public class EnemyHealthBarNGUI : MonoBehaviour
     {
         i++;
         if(i == 1)
-         _healthBar.transform.localScale = new Vector3(_healthBar.transform.localScale.x + 4, _healthBar.transform.localScale.y + 4, _healthBar.transform.localScale.z);
-       
-       // _healthBar.transform.position = (-(Camera.main.WorldToScreenPoint(-target.position).x - 975), (Camera.main.WorldToScreenPoint(-target.position).y + 340), 100, 16)
-        
-        //currentHealth = script.currentHealth;
-        //maxHealth = script.maxHealth;
-       // normalisedHealth = ((float)currentHealth / maxHealth) * 1;
-       // _healthBar.value = normalisedHealth;
-        
+        {
+
+            for(int k = 0; k <= _healthBar.Length; k++)
+            {
+                currentHealth = script[k].currentHealth;
+                maxHealth = script[k].maxHealth;
+                normalisedHealth = ((float)currentHealth / maxHealth) * 1;
+                _healthBar[k].value = normalisedHealth;
+
+                _healthBar[k].transform.localScale = new Vector3(_healthBar[k].transform.localScale.x + 4, _healthBar[k].transform.localScale.y + 4, _healthBar[k].transform.localScale.z);
+                _healthBar[k].transform.position = new Vector3(-(Camera.main.WorldToScreenPoint(-enemy[k].transform.position).x - 975), (Camera.main.WorldToScreenPoint(-enemy[k].transform.position).y + 340), 0);
+            }
+        }
+
+
     }
 }
