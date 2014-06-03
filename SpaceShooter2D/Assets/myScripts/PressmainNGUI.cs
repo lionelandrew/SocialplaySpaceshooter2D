@@ -48,7 +48,7 @@ public class PressmainNGUI : MonoBehaviour
 
         if(gameController.gameOver  && nameInput.GetComponent<MenuControllerNGUI>().entered == false)
         {
-            if (highscore.Count == 0 || highscore.Count < 10)
+            if (highscore.Count < 10)
            {
                 nameInput.SetActive(true);
            }
