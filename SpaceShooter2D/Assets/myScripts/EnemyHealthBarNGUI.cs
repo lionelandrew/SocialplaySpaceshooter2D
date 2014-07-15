@@ -32,7 +32,6 @@ public class EnemyHealthBarNGUI : MonoBehaviour
         i++;
         if(i == 1)
         {
-
             for(int k = 0; k <= _healthBar.Length; k++)
             {
                 currentHealth = script[k].currentHealth;
