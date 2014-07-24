@@ -5,7 +5,7 @@ public class Done_Mover : MonoBehaviour
 {
 	public float speed;
 
-	void Start ()
+	void Awake ()
 	{
 		rigidbody.velocity = transform.forward * speed;
 	}

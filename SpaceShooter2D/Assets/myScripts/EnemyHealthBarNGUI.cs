@@ -3,47 +3,38 @@ using System.Collections;
 
 public class EnemyHealthBarNGUI : MonoBehaviour
 {
-    UISlider[] _healthBar;
+    public UISlider _healthBar;
     private float currentHealth;
     private float maxHealth;
     private float normalisedHealth;
-    private Characters[] script;
-    GameObject[] healthBar;
-    GameObject[] enemy;
-    int i = 0;
+    private Characters script;
+    GameObject healthBar;
+    public GameObject healthBar1;
+
+    public GameObject target;
+    private Transform target1;
 
     void Awake()
     {
-        healthBar = GameObject.FindGameObjectsWithTag("EnemyHealthBar");
         if (healthBar != null)
         {
-            _healthBar = GetComponents<UISlider>();
+            _healthBar = GetComponent<UISlider>();
         }
 
-        enemy = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemy != null)
+        if (target != null)
         {
-            script = GetComponents<Characters>();
+            script = target.GetComponent<Characters>();
         }
     }
 
     void Update()
     {
-        i++;
-        if(i == 1)
-        {
-            for(int k = 0; k <= _healthBar.Length; k++)
-            {
-                currentHealth = script[k].currentHealth;
-                maxHealth = script[k].maxHealth;
-                normalisedHealth = ((float)currentHealth / maxHealth) * 1;
-                _healthBar[k].value = normalisedHealth;
+        currentHealth = script.currentHealth;
+        maxHealth = script.maxHealth;
+        normalisedHealth = ((float)currentHealth / maxHealth) * 1;
+        _healthBar.value = normalisedHealth;
 
-                _healthBar[k].transform.localScale = new Vector3(_healthBar[k].transform.localScale.x + 4, _healthBar[k].transform.localScale.y + 4, _healthBar[k].transform.localScale.z);
-                _healthBar[k].transform.position = new Vector3(-(Camera.main.WorldToScreenPoint(-enemy[k].transform.position).x - 975), (Camera.main.WorldToScreenPoint(-enemy[k].transform.position).y + 340), 0);
-            }
-        }
-
-
+        if (_healthBar.value == 0)
+            healthBar1.SetActive(false);
     }
 }
