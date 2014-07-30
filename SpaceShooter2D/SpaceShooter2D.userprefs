@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Done\Done_Scripts\Done_GameController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\myScripts\StatusNGUI.cs">
     <Files>
-      <File FileName="Assets\Done\Done_Scripts\Done_GameController.cs" Line="44" Column="3" />
-      <File FileName="Assets\myScripts\Status.cs" Line="43" Column="54" />
+      <File FileName="Assets\myScripts\StatusNGUI.cs" Line="21" Column="27" />
+      <File FileName="Assets\myScripts\Done_PlayerController.cs" Line="13" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
